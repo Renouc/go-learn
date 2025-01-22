@@ -1,11 +1,13 @@
 package car
 
+// 选项模式 创建对象
+
 type Car struct {
-	Brand  string
-	Color  string
-	Model  string
-	Price  int
-	Year   int
+	Brand string
+	Color string
+	Model string
+	Price int
+	Year  int
 }
 
 type Option func(*Car)
@@ -42,11 +44,11 @@ func WithColor(color string) Option {
 
 func NewCar(opts ...Option) *Car {
 	car := &Car{
-		Brand:  "Unknown",
-		Color:  "Unknown",
-		Model:  "Unknown",
-		Price:  0,
-		Year:   0,
+		Brand: "Unknown",
+		Color: "Unknown",
+		Model: "Unknown",
+		Price: 0,
+		Year:  0,
 	}
 	for _, opt := range opts {
 		opt(car)
