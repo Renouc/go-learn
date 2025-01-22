@@ -1,6 +1,6 @@
 package car
 
-// 选项模式 创建对象
+// 函数选项模式 创建对象
 
 type Car struct {
 	Brand string
